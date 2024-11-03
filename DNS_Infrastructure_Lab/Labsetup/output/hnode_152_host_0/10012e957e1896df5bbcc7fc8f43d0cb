@@ -1,0 +1,2 @@
+zone "edu." { type master; file "/etc/bind/zones/edu."; allow-update { any; }; };
+
