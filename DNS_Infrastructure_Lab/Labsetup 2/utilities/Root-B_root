@@ -1,0 +1,13 @@
+$TTL 300
+$ORIGIN .
+@ SOA ns1. admin. 567747005 900 900 1800 60
+ns1. A 10.150.0.72
+@ NS ns1.
+ns2. A 10.160.0.72
+@ NS ns2.
+
+com.   IN  NS   ns1.com. 
+ns1.com.    IN  A    10.151.0.72
+
+; com. A 10.151.0.72
+; @ NS com.
