@@ -1,0 +1,116 @@
+; File written on Tue Nov  5 22:28:45 2024
+; dnssec-signzone version 9.20.3
+edu.			3600	IN SOA	ns1.edu. admin.ns1.edu. (
+					2008111001 ; serial
+					28800      ; refresh (8 hours)
+					7200       ; retry (2 hours)
+					2419200    ; expire (4 weeks)
+					86400      ; minimum (1 day)
+					)
+			3600	RRSIG	SOA 8 1 3600 (
+					20501231000000 20241105142845 9883 edu.
+					T3WS3Z8eTIueNpp5f1q8JsJ3eC2sZ/B/drEc
+					LWc0ip/FuW3i+XIZfIPDw/zxEVxu/ExpO1cc
+					x4e/OuzqsRVGFMhm4jALZDCV2xVM+lS64OO9
+					tmqzwvlhapcD0dwCBRGiir+5b6qCrI/kBFZw
+					F69ZoxYC0UKIS8l7slrG+tzbQvc= )
+			3600	NS	ns1.edu.
+			3600	RRSIG	NS 8 1 3600 (
+					20501231000000 20241105142845 9883 edu.
+					geKhFyx6mDDgj1x4e1Tz3PL+F+oc1GMSiAXG
+					ibXPQjQfR8lOdY0Kb154616uCiFxcbSczuZH
+					FB0qf+KLTemAjyoXBVtMUSK8V1gJ2RrPN/py
+					YlTTwuGvJZJ9bkxY8CIkQ292g1DSjCoUmZ15
+					JI+rozJKfedZBe13MQdG5Esprfs= )
+			3600	NSEC	example.edu. NS SOA RRSIG NSEC DNSKEY
+			3600	RRSIG	NSEC 8 1 3600 (
+					20501231000000 20241105142845 9883 edu.
+					Ob5z0G99BW729Pblid8bNqazU222fttT2b1M
+					Crnji+U4Io20ZbEgcgjU+JjopbkbOJ+kiCt4
+					yElLA/xUWTP/zHxUE8nxc8y99U9rhQRX4Etq
+					MAESDXItrJ9EH2yZubRJD5tSbR6r9j626rOU
+					OWRkSjlZXXyWvUGgqqoJUXQHkf8= )
+			3600	DNSKEY	256 3 8 (
+					AwEAAcFajTke2y7mkwX3NmN2XwR0xcOJFYHx
+					sR+GkfNMY11iLpaAbHBP8gA0G/hOJWc3L14e
+					kxDt121T3J3MG9Xgoy5rfECUwhBXGp4u+x1B
+					kpcZVJslEKZXMD8j169c5sFbvfTPCz1BPvTQ
+					cnEtCP9O98fvTbVYisJBw2uy0hw7Lj9L
+					) ; ZSK; alg = RSASHA256 ; key id = 9883
+			3600	DNSKEY	257 3 8 (
+					AwEAAbs/2+E5wKjToQ9ofgwBuOSnFQr3OnNZ
+					Ijqcgn9G+9tAX7EkCr2McNT3R54f64LyxJhX
+					VfQWri//f9h4ktXJpcaY0UUaAodVQJJzP4IG
+					HtNDtcGwmevvq8vQqKhnjOhLskxSqL6bMACV
+					43y9hOPGlNoZ6u/PGIqKeEkq2Mb8ydZNrPuK
+					IhAz9qhNZdI4UhxY6epex5G3Wa8z1uFABZg7
+					/sdnFqcC/f//npu1TZ4JGm9qXaM2069JdkAd
+					kC8h7Cmxm/L9TvfZCDstVl+yhOTntEsliCC8
+					HZ3+mRxJkLynXZeAcJo4NUYInluMJUwl9uI0
+					v4+glRFacNQv+MFIeHvaiVk=
+					) ; KSK; alg = RSASHA256 ; key id = 4750
+			3600	RRSIG	DNSKEY 8 1 3600 (
+					20501231000000 20241105142845 4750 edu.
+					a5BlsOemLWdXxJV27YjxX7Qy3uvwwULgqkgJ
+					rIul/40ByxsV7o9QMGMAa0aDtoOVxoRkDHiV
+					nOU0BMe1g1l8koxG42JfguetDHvSLct36uA0
+					HJUj38jlwAe0a6lnQINu0+xrwxbSNpm77VHZ
+					IyrakuYY7UBeHpq1pFAy9F2nGWNuwfHoTqRw
+					DLne9d8x8LSHliDLN2b3wgR9EpQNSOEbi3dK
+					CeNtLKwxqJQytK2xzTf2XYOvxFLC5j+4AjkT
+					rET9JF28ZqdhNGDDtaPghzQZ/hMm3Eb753rX
+					RUV2zu/ovW2gYYA4ZFgFur9H14sfHo3Xe20v
+					+gpcnqOzPKF9OtI9Iw== )
+			3600	RRSIG	DNSKEY 8 1 3600 (
+					20501231000000 20241105142845 9883 edu.
+					rPBsHXSbRAg9eQa4O39uWRbmnSi1vGOOvqfp
+					CAvy43Sml2CziS4+P7ryy+qXv0R+Lto8cFqu
+					V/TNHrkMvg54/sXMs70LAyZRF1bwKIdfpcPw
+					V1GIpKWwOY4usosz1sNayjoDBR9nzn2yuRiq
+					8fRhJznmpaUc5dWlUTLCFiSCavw= )
+example.edu.		3600	IN NS	ns.example.edu.
+			3600	DS	2527 8 2 (
+					5BB26F55D9D655C681D103CC657D3367F168
+					5622809B115AAC33E804DCB40B2D )
+			3600	RRSIG	DS 8 2 3600 (
+					20501231000000 20241105142845 9883 edu.
+					f6e8yHOdOnfLfzz0zuLfJKUtukHbe+CUyOGD
+					ORVNT+fRStbRh0dgROD+vg502TUik36mmf9M
+					1kVxoVc3kruQhbGphlflEBYoRgw+tHAQB1Vf
+					lUnaSDc7WvEEki77IeGSobEomx9fQMfZPZeD
+					Uu3bgFNivpcjIhSlr1Xq6tITkV4= )
+			3600	NSEC	ns1.edu. NS DS RRSIG NSEC
+			3600	RRSIG	NSEC 8 2 3600 (
+					20501231000000 20241105142845 9883 edu.
+					qhtf++80OukePI6RxyqrbJv2QRhaPNAAToi1
+					Z+XarxoOUJ/nyoO3lnNxIhN0QGFQRK87A6iw
+					KYe2qQUEyKnso7GW1sjMb4jEAJbbXiY1uAjB
+					YCT0jndABfexXDQ5wYlEEdf0qWWusLY6qXU5
+					sTCoFWcEDKEkhYhDDTtkGRCV39E= )
+ns.example.edu.		3600	IN A	10.9.0.65
+ns1.edu.		3600	IN A	10.9.0.60
+			3600	RRSIG	A 8 2 3600 (
+					20501231000000 20241105142845 9883 edu.
+					HOEl6nBAc3GMGigm6RLchAH5W5gFKS9CaHgd
+					9cI4VglayZ6OOCw7xcWl1OMs9QBIDxddrttd
+					oCc5k/bs8CXQmr5TQRhk1XP76LdTmxg1Bf3j
+					XcYFEmAlJgZORuW+RYH6dXdVjBHxRPuVgNNQ
+					6MuPk1IkVm0M5ZxYTg+pM0sX/I4= )
+			3600	NSEC	syr.edu. A RRSIG NSEC
+			3600	RRSIG	NSEC 8 2 3600 (
+					20501231000000 20241105142845 9883 edu.
+					ldb/zrOHicuTZ3dHDEHGx2GfXXYPSQkMvYUo
+					Cq1WpnrZAyXKTBL5KXO6wM65jeQiPx4hE9xY
+					ZkcgLZFlrN1tkrZ70UpoEAhMjYNg6mU+S0hA
+					tdYo0qupIeeYYp0PHks06XULvTGeqVXIXQ04
+					BMOWZBldWy2eDDemHIVHaySThvQ= )
+syr.edu.		3600	IN NS	ns1.syr.edu.
+			3600	NSEC	edu. NS RRSIG NSEC
+			3600	RRSIG	NSEC 8 2 3600 (
+					20501231000000 20241105142845 9883 edu.
+					WaynkHVfiPA1sVUzNIrXMG1HPFqfSLP+CxOe
+					3NIbKkWWF5e4Dsz2PcRhCWLGEj20zYSRIX+A
+					X6AZTJi3rH0GoRGkikYw/61XfV6anJXRLMT4
+					k2gQZjbjOFWjBpM0B/eR7LIl/+Xi7CZ8SNFV
+					uhsuxnZ4Al1WZob6mtTxf2VqoXc= )
+ns1.syr.edu.		3600	IN A	128.230.12.8

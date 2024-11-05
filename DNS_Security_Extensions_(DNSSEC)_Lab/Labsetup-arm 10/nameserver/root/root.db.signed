@@ -1,0 +1,106 @@
+; File written on Tue Nov  5 22:32:01 2024
+; dnssec-signzone version 9.20.3
+.			259200	IN SOA	root-ns1.net. admin.root-ns1.net. (
+					2008111001 ; serial
+					28800      ; refresh (8 hours)
+					7200       ; retry (2 hours)
+					2419200    ; expire (4 weeks)
+					86400      ; minimum (1 day)
+					)
+			259200	RRSIG	SOA 8 0 259200 (
+					20501231000000 20241105143201 45915 .
+					E8HJLOEtHUoUWWUjfb4VAhb4Oo8rux2A/pey
+					ILH7pbtq1WczdwDIH6kWGWe5YFRkGQshE1Ul
+					Z2ltEifdAQQeFy3xc49ba9qgWgRr7n5DKxs9
+					BzuQaU3TgfaIZBD4BQHQClc60QO8ddnsHSFZ
+					rptj4iUnk6Z7hDraS77/8TnsJBs= )
+			259200	NS	root-ns1.net.
+			259200	RRSIG	NS 8 0 259200 (
+					20501231000000 20241105143201 45915 .
+					Y7DHwXVoVsDz8I0DmjK2sNWl8ngGFvuf2lxS
+					jUQuKF7PHC/fMb2tt4XBatagZ8uw29GY2d7P
+					RCa/PMS3XBBJS2OahY/oDoQcXOcH07esCgnv
+					Qkk0cDZ8n2OQDOeDZFL899nUA/F5QKexSFq0
+					Yw8c3lbKfyo37wUFgpvpBku3S8o= )
+			86400	NSEC	edu. NS SOA RRSIG NSEC DNSKEY
+			86400	RRSIG	NSEC 8 0 86400 (
+					20501231000000 20241105143201 45915 .
+					G2zr4gOgKm784e3TGcpsxTjvjGATIJAhghYY
+					XB9otJBxtoUFlwGQMK5DV/yENE5kvZ+lWU5l
+					pW2F8ilgO++FyiAANZe3dzZ2R/UB/qzSMxaq
+					RPnukq62iPsdxqGnvFk1NbWFV5BslERSeKNf
+					DT7soqjIsKUkifYKsNkWA5vAk3c= )
+			259200	DNSKEY	256 3 8 (
+					AwEAAcnhcIso2IbXFKKb737oK4TE5/dC/x41
+					VULB7t/IPZsymjKA3qIXspAA0n6mLZcRemOx
+					JQwfpsDDTKf80n6Gfr/IKt+e7+TOKhYU3+bM
+					UO5KNpwDwI9hu7WMG8CTI5Nax9Gu5DQmYeBC
+					82U0JYttrGLlsknOFS2lOqtyRRYUoZF3
+					) ; ZSK; alg = RSASHA256 ; key id = 45915
+			259200	DNSKEY	257 3 8 (
+					AwEAAboFcSG2SQVvqhJ0PjkPcJaHte4Au+XS
+					tjlgcvUMv/7zum0xZPz9YE6tBfHUYTw3c0zB
+					KXeD2cDkOwTebC2NXgFOZq7JhnUNzx9/1KAj
+					3sqcYUkq4XCpotmId/zEXWOjzJYPP45khBr+
+					w1pGR92tkTH9gpwW60EDxTyjS0xxDa0nRQGF
+					BF9aEGbMqliBx0qmBtoVpUO0plz4OogjRjwT
+					tJGaeK9n4A9XVfAlOwaqloYyDqC3QHKaXb5h
+					ZwHrNmah6UYdz3Hx+ZQXqCQJMCOwGya+9qR/
+					LsNL3m+J82gM7In8Z1vruuyRDaCKiGIXn72/
+					F40owp7Rl9PaNCNk1WXCmDU=
+					) ; KSK; alg = RSASHA256 ; key id = 52441
+			259200	RRSIG	DNSKEY 8 0 259200 (
+					20501231000000 20241105143201 45915 .
+					tBnEBTapMwsBeVHfq81uRP/Dupa1GonzmxQS
+					skwoK4z9n7wtkF8PsZ2Kps/nRKQnq3Uo093X
+					OK5DjYjVbWJ7eV9ugc71hI3Pl75zYPebx6e1
+					hyRqGkhBBBLEFgp+QvQkcBetv2YuZMHcBUgW
+					fWbojm9WuhYicnlcjZT36pTXtuM= )
+			259200	RRSIG	DNSKEY 8 0 259200 (
+					20501231000000 20241105143201 52441 .
+					M3wwbIM247C5XvhC4X3+5XMhwuHfZCWsgsVK
+					i+XUrM9LEqaXK3FjyKRJFQ9KZo2CIlf+VsSJ
+					GczOMtO6/byaVhy5j5DaLhuwGjNNonnNMEH6
+					VO5nk7gB4hFA/huom9gJzZIGcgAnyfsc/GQb
+					fyDCLTIMmOXjwCGkbjv6BQR1XZnTBRZlkzTF
+					j5xiI26bsOMHQjUIcsvPocVAeABBNAIMYOP8
+					CiHrPrie4+tAflG5ZVri+T3SfOZqTmZ5Cwpf
+					614+cmmTcjKdZBHzxCjdTunTJHOPN1M2RikN
+					4BLH8c4KagLbtumc46OUA77/KdNZjPfgsxRE
+					hrZM6g5PCdIK8MFgvA== )
+edu.			259200	IN NS	ns1.edu.
+			259200	DS	4750 8 2 (
+					90346518DCF63FFF6BCD430292EC7EDD8FE1
+					A56996ACE49D97861F3A05058101 )
+			259200	RRSIG	DS 8 1 259200 (
+					20501231000000 20241105143201 45915 .
+					GqNAijpp5efHPlD7ICtfoMfF/NAnnFKFL5Cl
+					dBsyRkframHKQga8eM95GqZRxaViB5w37sET
+					kkgWpyYASMiw2bwikszNShBAI7Jkn8pTP/Gr
+					VcauTyGI7xvoL101v8E208gUNdwDIaCakDPU
+					89hpUCpG37FYOfZN3rBdR8wOEG8= )
+			86400	NSEC	root-ns1.net. NS DS RRSIG NSEC
+			86400	RRSIG	NSEC 8 1 86400 (
+					20501231000000 20241105143201 45915 .
+					QHiOu8eG27YpC+2nyxjftMVTdEfut8q+bCc/
+					dVwc3wPdD1cSy++53Ryrw+MXUI1GWR/JK6l7
+					OsNNp7kRKzSlHaTB6FuKbC5pv0nuKwZP1e6g
+					6nEWkiGLdNobDnWIqdSgR6lic551spB4Hm0Q
+					LXQphIGk5TM/X2+8gq0/FeopPA0= )
+ns1.edu.		259200	IN A	10.9.0.60
+root-ns1.net.		259200	IN A	10.9.0.30
+			259200	RRSIG	A 8 2 259200 (
+					20501231000000 20241105143201 45915 .
+					pBoImT84elIXCyvUNKCmwXq7dZP+Vgr/Y4eZ
+					P4j0QaMp7/P+/vZoE+m2lRW6RY4BXcgWdO/g
+					hGRkvoq/E9anFtzR9N/cCdN5hswstg5Cx8y8
+					+fxShy8Rsb+R40zlLHe9+1TEbpSimAtXemch
+					c0Qy8GpbxJhGgqIAINTM5toYVAM= )
+			86400	NSEC	. A RRSIG NSEC
+			86400	RRSIG	NSEC 8 2 86400 (
+					20501231000000 20241105143201 45915 .
+					OHpgBwz1bMghMVwavJCUwn5fYYLSFEPK8Pwj
+					OkXN42jzZdAHEAA3HdopvZIpAN3A4LI5qwP5
+					u3HBPpmXxzFL0ckVHKH/4DmA5jKdOgoWBpBR
+					ruRCaSuOPYONhIfNh3I6mPBS+1EuDVPd4gLO
+					vSZLspJMDNk8UkYEWMsowffR/Lk= )

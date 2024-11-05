@@ -12,3 +12,6 @@ root-ns1.net.           IN      A       10.9.0.30
 ; Records for TLDs  
 edu                     IN      NS   ns1.edu.
 ns1.edu.                IN      A    10.9.0.60
+
+; Include the DS record for edu
+$INCLUDE ../edu/dsset-edu.
