@@ -1,0 +1,43 @@
+Task 2.A: Protecting the Router
+
+iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+iptables -P OUTPUT DROP ➙Set default rule for OUTPUT
+iptables -P INPUT DROP ➙Set default rule for INPUT
+
+Task 2.B: Protecting the Internal Network
+
+iptables -A FORWARD -i eth0 -p icmp --icmp-type echo-request -j DROP
+iptables -A FORWARD -i eth1 -p icmp --icmp-type echo-request -j ACCEPT
+iptables -A FORWARD -i eth1 -p icmp --icmp-type echo-reply -j ACCEPT
+iptables -P FORWARD DROP
+
+Task 2.C: Protecting Internal Servers
+
+iptables -A FORWARD -i eth0 -d 192.168.60.5 -p tcp --dport 23 -j ACCEPT
+iptables -A FORWARD -i eth1 -s 192.168.60.5 -p tcp --sport 23 -j ACCEPT
+iptables -P FORWARD DROP 
+
+Task 3.B: Setting Up a Stateful Firewall
+
+iptables -A FORWARD -i eth0 -p tcp -d 192.168.60.5 --dport 23 --syn -m conntrack --ctstate NEW -j ACCEPT
+iptables -A FORWARD -i eth1 -p tcp --syn -m conntrack --ctstate NEW -j ACCEPT
+iptables -A FORWARD -p tcp -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+iptables -A FORWARD -p tcp -j DROP
+iptables -P FORWARD ACCEPT
+
+ Task 5: Load Balancing
+ 
+iptables -t nat -A PREROUTING -p udp --dport 8080 -m statistic --mode nth --every 3 --packet 0 -j DNAT --to-destination 192.168.60.5:8080
+
+iptables -t nat -A PREROUTING -p udp --dport 8080 -m statistic --mode nth --every 2 --packet 0 -j DNAT --to-destination 192.168.60.6:8080
+
+iptables -t nat -A PREROUTING -p udp --dport 8080 -m statistic --mode nth --every 1 --packet 0 -j DNAT --to-destination 192.168.60.7:8080
+
+# random
+iptables -t nat -A PREROUTING -p udp --dport 8080 -m statistic --mode random --probability 0.33 -j DNAT --to-destination 192.168.60.5:8080
+
+iptables -t nat -A PREROUTING -p udp --dport 8080 -m statistic --mode random --probability 0.33 -j DNAT --to-destination 192.168.60.6:8080
+
+iptables -t nat -A PREROUTING -p udp --dport 8080 -m statistic --mode random --probability 0.33 -j DNAT --to-destination 192.168.60.7:8080
+

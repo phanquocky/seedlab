@@ -1,0 +1,1 @@
+savedcmd_/home/seed/Documents/seedlab/Firewall_Exploration_Lab/Labsetup-arm/Files/kernel_module/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/seed/Documents/seedlab/Firewall_Exploration_Lab/Labsetup-arm/Files/kernel_module/Module.symvers -T /home/seed/Documents/seedlab/Firewall_Exploration_Lab/Labsetup-arm/Files/kernel_module/modules.order -i Module.symvers -e 

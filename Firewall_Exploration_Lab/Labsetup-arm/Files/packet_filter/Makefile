@@ -1,4 +1,4 @@
-obj-m += seedFilter.o
+obj-m += seedBlock.o
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 
@@ -7,8 +7,8 @@ clean:
 
 ins:
 	sudo dmesg -C
-	sudo insmod seedFilter.ko
+	sudo insmod seedBlock.ko
 
 rm:
-	sudo rmmod seedFilter
+	sudo rmmod seedBlock
 
