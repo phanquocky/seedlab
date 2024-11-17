@@ -1,0 +1,41 @@
+Task 1
+
+// on host 10.8.0.99
+ssh -4NT -L 0.0.0.0:2222:192.168.20.5:23 seed@192.168.20.99
+
+// on host 10.8.0.5
+telnet 10.8.0.99 2222
+
+Task2
+Task2.1
+    test-ipv6.com: 139.162.9.249
+    dyna.wikimedia.org 103.102.166.224
+
+// on host B 192.168.20.99
+ssh -4NT -D 0.0.0.0:2222 seed@10.8.0.99
+
+// on host B1 192.168.20.5
+curl --proxy socks5h://192.168.20.99:2222 www.example.com
+
+Task 2.2: Testing the Tunnel Using Browser
+skip because I don't using VM linux machine
+
+Task 2.3: Writing a SOCKS Client Using Python
+
+Task3:
+Task 3.1: Bypassing Ingress Firewall
+// on host A 10.8.0.99
+ssh -w 0:0 root@192.168.20.99 -o "PermitLocalCommand=yes" \
+-o "LocalCommand= ip addr add 192.168.53.88/24 dev tun0 && \
+ip link set tun0 up" \
+-o "RemoteCommand=ip addr add 192.168.53.99/24 dev tun0 && \
+ip link set tun0 up"
+
+// on host B 192.168.20.99
+ssh -w 0:0 root@10.8.0.99 -o "PermitLocalCommand=yes" \
+-o "LocalCommand= ip addr add 192.168.53.99/24 dev tun0 && \
+ip link set tun0 up" \
+-o "RemoteCommand=ip addr add 192.168.53.88/24 dev tun0 && \
+ip link set tun0 up"
+
+// don't complete task 3: improve later
